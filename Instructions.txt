@@ -1,0 +1,98 @@
+=========================
+QUOTE GENERATOR PROJECT
+Execution & Setup Guide
+=========================
+
+Project Description:
+---------------------
+This is a full-stack quote generator web application that uses a modern React-based framework (Next.js) along with a locally hosted AI model (Mistral via Ollama) to generate meaningful quotes based on a user's chosen topic.
+
+It has been deployed live via Vercel, and the source code is available on GitHub.
+
+Technologies Used:
+-------------------
+- Next.js 15 (App Router)
+- TypeScript
+- Tailwind CSS
+- ShadCN UI Components
+- Local LLM Integration via Ollama
+- Mistral 7B model
+- Vercel (for deployment)
+- pnpm (for dependency management)
+
+-------------------------------
+🧱 REQUIREMENTS (for Local Run):
+-------------------------------
+1. Node.js (version 18 or later)
+2. pnpm (Install using `npm i -g pnpm`)
+3. Git
+4. Ollama installed locally (https://ollama.com/download)
+5. Mistral model installed in Ollama
+
+-------------------------
+🧪 LOCAL SETUP INSTRUCTIONS
+-------------------------
+
+1. Clone the repository:
+   git clone https://github.com/FaatehHaneef/Nexium_Faateh_Assignment1.git
+
+2. Move into the project directory:
+   cd Nexium_Faateh_Assignment1
+
+3. Install dependencies:
+   pnpm install
+
+4. Pull the Mistral model in Ollama (if not already done):
+   ollama pull mistral
+
+5. Start Ollama locally:
+   ollama run mistral
+
+6. Create a `.env.local` file in the root of the project with this content:
+   OLLAMA_MODEL=mistral
+
+7. Start the development server:
+   pnpm dev
+
+8. Open the app in your browser:
+   http://localhost:3000
+
+You can now enter any topic (like love, life, motivation) and get AI-generated quotes from Mistral running locally via Ollama.
+
+----------------------
+🌍 DEPLOYED LIVE AT:
+----------------------
+Visit the deployed web app at:
+👉 https://<YOUR_VERCEL_DEPLOYMENT_LINK>.vercel.app
+
+⚠️ Note: The deployed Vercel version is designed to work only with cloud-based APIs (e.g., OpenAI or Gemini). To use local Mistral/Ollama, run the app locally using the instructions above.
+
+---------------------
+📁 PROJECT STRUCTURE:
+---------------------
+- src/app/page.tsx          => Frontend (user interface)
+- src/app/api/gemini/route.ts => API route that connects to the local LLM (Mistral)
+- components/               => Reusable UI components via ShadCN
+- public/                   => Static assets
+- .env.local                => Environment configuration
+
+-----------------------------
+📎 SUBMISSION/REFERENCE LINKS:
+-----------------------------
+GitHub Repository:
+🔗 https://github.com/FaatehHaneef/Nexium_Faateh_Assignment1
+
+Vercel Deployment:
+🔗 https://<YOUR_VERCEL_DEPLOYMENT_LINK>.vercel.app
+
+----------------------
+Optional Extensions:
+----------------------
+- Switch between Ollama and Gemini/OpenAI APIs
+- Add quote copy/share functionality
+- Animate quote reveal
+- Store quote history or favorite quotes
+
+-----------------------------------
+Created by: Faateh Haneef | July 2025
+-----------------------------------
