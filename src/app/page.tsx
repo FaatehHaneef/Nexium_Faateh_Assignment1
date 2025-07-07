@@ -47,11 +47,11 @@ export default function Home() {
       <Button onClick={handleGenerate}>Generate Quotes</Button>
 
       <div className="mt-6 space-y-2 text-center">
-        {result.map((quote, i) => (
-          <p key={i} className="text-lg">
-            “{quote}”
-          </p>
-        ))}
+        {result.map((quote: string, i: number) => (
+  <p key={i} className="text-lg">
+    “{quote}”
+  </p>
+))}
       </div>
     </main>
   );
