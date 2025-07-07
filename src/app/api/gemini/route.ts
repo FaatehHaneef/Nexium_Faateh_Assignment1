@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
     const quotes = text
       .split("\n")
       .map((q: string) => q.trim())
-      .filter((q) => q.length > 0 && q !== "-");
+      .filter((q: string) => q.length > 0 && q !== "-");
 
     return Response.json({ quotes });
   } catch (err) {
