@@ -33,7 +33,8 @@ export async function POST(req: Request) {
 
     console.log("🧠 Mistral response:\n", text);
 
-    return Response.json({ quotes: text.split("\n").filter(q => q.trim()) });
+    return Response.json({ quotes: text.split("\n").filter((q: string) => q.trim()) });
+
 
   } catch (err) {
     console.error("🔥 Ollama fetch failed:", err);
