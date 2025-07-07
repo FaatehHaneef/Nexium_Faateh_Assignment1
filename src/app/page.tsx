@@ -1,6 +1,5 @@
 "use client";
-
-import { useState } from "react";
+import React, { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
@@ -47,11 +46,13 @@ export default function Home() {
       <Button onClick={handleGenerate}>Generate Quotes</Button>
 
       <div className="mt-6 space-y-2 text-center">
-        {result.map((quote: string, i: number) => (
-  <p key={i} className="text-lg">
-    “{quote}”
-  </p>
-))}
+        {Array.isArray(result) ? (
+          result.map((quote, i) => (
+            <p key={i} className="text-lg">“{quote}”</p>
+          ))
+        ) : (
+          <p className="text-red-500">⚠ Could not load quotes. Try again.</p>
+        )}
       </div>
     </main>
   );
