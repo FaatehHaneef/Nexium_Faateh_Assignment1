@@ -2,11 +2,11 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-  experimental: {
-    serverActions: true, // optional, but helps with future features
-  },
+  // experimental: {
+  //   serverActions: true,
+  // },
   typescript: {
-    ignoreBuildErrors: false, // keep this true for production safety
+    ignoreBuildErrors: false,
   },
 };
 
